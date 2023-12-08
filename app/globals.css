@@ -1,27 +1,159 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+ 
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
 }
+
+@layer components {
+  .btn-primary {
+    @apply text-3xl bg-c_primary hover:bg-yellow-500;
+  }
+
+  .text-hover{
+    @apply text-black hover:text-c_primary bg-white dark:bg-black dark:text-white dark:hover:text-c_primary;
+  }
+
+  .text-large{
+    @apply text-c_primary bg-white dark:bg-black dark:text-c_primary text-4xl font-semibold     
+    font-sans ;
+  }
+
+  .text_p{
+    @apply font-medium text-c_text_black text-base tracking-normal leading-3 dark:text-white;
+  } 
+  .text_h1{
+    @apply font-black text-6xl leading-10 text-c_secondary dark:text-c_primary 
+  }
+  .text_h2{
+    @apply font-black text-4xl leading-8 text-c_secondary dark:text-c_primary;
+  }
+
+  .text_h2_black{
+    @apply font-black text-4xl leading-8 text-c_text_black  dark:text-white;
+  }
+
+  .text_h3{
+     @apply font-medium text-3xl leading-3 text-c_secondary dark:text-c_primary;
+  }
+
+  .text_h3_black{
+    @apply font-medium text-2xl leading-3 text-c_text_black dark:text-white;
+  }
+
+  .text_h4{
+    @apply font-normal text-xl leading-3 text-c_text_black dark:text-white;
+  }
+
+  .text_h5{
+    @apply font-extralight text-base leading-6 text-c_text_black dark:text-white text-slate-600;
+  }
+
+  .text_h6{
+    @apply font-light text-base leading-3 text-c_text_black dark:text-white;
+  }
+
+  .text-c_lg{
+    @apply font-medium text-c_text_black text-lg;
+  }
+
+  .text-c_xl{
+    @apply font-medium text-xl text-c_text_black;
+  }
+
+  .gradient-st{
+    @apply bg-gradient-to-l from-c_secondary to-c_tertiary transition duration-300 delay-150 hover:delay-300 ;
+  }
+
+  .gradient-st-dark{
+    @apply bg-gradient-to-l from-c_primary to-c_primary_dark transition duration-300 delay-150 hover:delay-300 ;
+  }
+
+  .container{
+    @apply lg:max-w-screen-xl  mx-auto ;
+  }
+
+  .border_c{
+    @apply border-2 border-c_tertiary dark:border-c_primary;
+  }
+
+  .f_row {
+    @apply flex flex-row;
+  }
+  .f_col {
+    @apply flex flex-col;
+  }
+
+}
+
