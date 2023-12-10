@@ -154,6 +154,12 @@
   .f_col {
     @apply flex flex-col;
   }
+  .text-c_input{
+    @apply border border-c_tertiary dark:border-c_primary h-10 rounded-sm ps-3 my-2 dark:bg-c_text_black;
+  }
+  .text-c_label{
+    @apply text_h3 text-base font-normal;
+  }
 
 }
 

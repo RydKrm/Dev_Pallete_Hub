@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/shared/theme-provider'
-import  Navbar  from '@/components/shared/Navbar'
+import Navbar from '@/components/shared/Navbar'
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -23,20 +23,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ roboto.className }>
-         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          > 
-          <Navbar/> 
-          <div className="max-w-full md:max-w-full lg:max-w-full"> 
-           {children}
+      <body className={roboto.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="max-w-full md:max-w-full lg:max-w-full dark:bg-black">
+            <Navbar />
+            {children}
           </div>
-           
-          </ThemeProvider>
-        </body>
+
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
