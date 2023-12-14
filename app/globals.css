@@ -178,7 +178,7 @@
   }
 
   .tag_text{
-    @apply text-[#212529] font-[600] text-[12px] leading-[12px] font-noto;
+    @apply text-[#212529] font-[500] text-[12px] leading-[12px] font-noto;
   }
 
   .date_text{
