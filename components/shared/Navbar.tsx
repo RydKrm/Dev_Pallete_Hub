@@ -6,7 +6,7 @@ import { ModeToggle } from '@/app/darkMode';
 
 const Navbar = () => {
     return (
-        <nav className="navbar bg-transparent ">
+        <nav className="container navbar bg-transparent ">
             <div className="navbar-start w-full lg:max-w-6xl flex justify-center">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

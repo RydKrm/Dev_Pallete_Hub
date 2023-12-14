@@ -31,18 +31,18 @@ const SideBar: React.FC<SideBarProps> = ({ handleOpen }) => {
 
   return (
     <>
-      <div className='f_col bg-white dark:bg-black lg:ms-10 lg:mt-14'>
+      <div className='f_col  lg:ms-10 lg:mt-14'>
         <p className=' lg:hidden mb-5 bg-c_tertiary dark:bg-c_primary text-white pt-1 pl-2 w-8 h-8 rounded-md' onClick={handleOpen}><FontAwesomeIcon icon={faBars} /> </p>
         <div>
-          <h2 className='text_h4 mb-4'>Seclect Tags</h2>
+          <h2 className='heading_2 mb-4'>Seclect Tags</h2>
           {
-            tags.map(tag => <p className='text_h5 text-sm dark:text-slate-300 font-thin my-1' key={tag._id}>{tag.tag}</p>)
+            tags.map(tag => <p className='heading_3 text-sm dark:text-slate-300 font-thin my-1' key={tag._id}>{tag.tag}</p>)
           }
         </div>
         <div>
-          <h2 className='text_h4 mb-4 mt-10'>Recent Projects </h2>
+          <h2 className='heading_2 mb-4 mt-10'>Recent Projects </h2>
           {
-            projects.map(project => <p className=' w-48 text_h5 text-sm dark:text-slate-300 font-thin my-1' key={project._id}>{project.project}</p>)
+            projects.map(project => <p className=' w-48 heading_3 text-sm dark:text-slate-300 font-thin my-1' key={project._id}>{project.project}</p>)
           }
         </div>
 

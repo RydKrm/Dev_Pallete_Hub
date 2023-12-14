@@ -9,13 +9,13 @@ const DropDown: React.FC<DropDownInterface> = ({ list, handler }) => {
   return (
     <div>
       <select
-        className="rounded-sm border_c font-light font-poppins ms-5 md:ms-0 h-9 w-36 bg-white dark:bg-c_text_black border"
+        className="rounded-sm border border-c_primary font-light font-poppins ms-5 md:ms-0 h-9 w-36 bg-white dark:bg-c_bg_dark "
         onChange={handler} >
         <option value="">
           Select
         </option>
         {list.map((item) => (
-          <option key={item._id} value={item.field} className='uppercase'>
+          <option key={item._id} value={item.field} className='uppercase dark:bg-c_bg_dark'>
             {item.field}
           </option>
         ))}

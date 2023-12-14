@@ -1,15 +1,13 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Noto_Sans_JP } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/shared/theme-provider'
 import Navbar from '@/components/shared/Navbar'
 
-const roboto = Roboto({
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
+const noto_sans_sp = Noto_Sans_JP({
+  style: ['normal'],
   subsets: ['latin'],
-  display: 'swap',
-})
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,14 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={noto_sans_sp.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-w-full md:max-w-full lg:max-w-full dark:bg-black">
+          <div className="max-w-full md:max-w-full lg:max-w-full dark:bg-c_bg_dark ">
             <Navbar />
             {children}
           </div>

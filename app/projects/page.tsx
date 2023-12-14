@@ -9,11 +9,11 @@ const Projects = () => {
     setIsOpen(!isOpen);
   }
   return (
-    <div className='f_col lg:f_row w-screen relative lg:static'>
-      <div className={`absolute lg:static w-full md:w-5/12 lg:w-3/12 mt-5  ${isOpen ? "block " : "  hidden "} z-40 lg:block  `}>
+    <div className='f_col lg:f_row w-screen relative lg:static bg-white dark:bg-c_bg_dark'>
+      <div className={`absolute lg:static w-full md:w-5/12 lg:w-3/12 mt-5  ${isOpen ? "block " : "  hidden "} z-40 lg:block bg-white dark:bg-c_bg_dark `}>
         <SideBar handleOpen={handleOpen} />
       </div>
-      <div className="w-full lg:w-9/12 bg-white dark:bg-black absolute lg:static">
+      <div className="w-full lg:w-9/12  absolute lg:static bg-white dark:bg-c_bg_dark">
         <ProjectContent handleOpen={handleOpen} />
       </div>
     </div>

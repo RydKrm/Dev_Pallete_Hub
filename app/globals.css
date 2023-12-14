@@ -160,6 +160,35 @@
   .text-c_label{
     @apply text_h3 text-base font-normal;
   }
+ 
+  .heading_1{
+    @apply text-[#0c0e0f] font-[900] text-[45px] leading-[54px] font-noto dark:text-[#cccccc];
+  }
+
+  .heading_2{
+    @apply text-[#0f1113] font-[900] text-[20px] leading-[24px] font-noto dark:text-[#cccccc];
+  }
+
+  .heading_3{
+    @apply text-[#212529] font-[500] text-[14px] leading-[16.6px] font-noto dark:text-[#cccccc]
+  }
+
+  .heading_4{
+    @apply text-[#212529] font-[500] text-[12px] leading-[14.4px] font-noto dark:text-[#cccccc];
+  }
+
+  .tag_text{
+    @apply text-[#212529] font-[600] text-[12px] leading-[12px] font-noto;
+  }
+
+  .date_text{
+    @apply text-[#666666] font-[400] text-[10px] leading-[10px] font-noto dark:text-[#cccccc] uppercase;
+  }
+
+  .paragraph_text{
+    @apply text-[#687385] font-[400] text-[12px] leading-[18px] font-noto dark:text-[#cccccc];
+  }
+
 
 }
 

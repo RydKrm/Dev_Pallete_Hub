@@ -21,10 +21,19 @@ module.exports = {
         c_black: "#454545",
         c_text_black: "#222222",
         c_text_white: "#FFE6C7",
-        c_primary: "#FF6809",
         c_primary_dark : "#BC520F",
-        c_secondary: "#3EC1D3",
-        c_tertiary: "#FF165D",
+
+        // New Colors 
+        c_bg_light:"#ffffff",
+        c_bg_dark: "#212529",
+
+        c_primary: "#596ADA",
+        c_secondary: "#09815C",
+        c_tertiary: "#E59146",
+        c_accent: "#F1989C",
+        c_neutral:"#fa123f",
+        
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -78,6 +87,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        'noto': ['Noto Sans JP', 'sans-serif'],
+      }
     },
   },
   plugins: [
