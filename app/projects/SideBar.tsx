@@ -51,14 +51,14 @@ const SideBar: React.FC<SideBarProps> = ({ handleOpen }) => {
         <div>
           <h2 className='heading_2 mb-4'>Seclect Tags</h2>
           {
-            tags.map((tag,index) => <p className= {`heading_3 text-sm dark:text-slate-300 font-thin my-1 hover:${ colors[index % 4]} `} key={tag._id}>{tag.tag}</p>)
+            tags.map((tag,index) => <p className= {`heading_3 text-sm dark:text-slate-300 font-thin my-1 hover:${ colors[index % 4]} ms-3 `} key={tag._id}>{tag.tag}</p>)
           }
         </div>
         <div>
           <h2 className='heading_2 mb-4 mt-10'>Recent Projects </h2>
           {
             projects.map(project => 
-            <div key={project._id} className='flex flex-row my-5'>
+            <div key={project._id} className='flex flex-row my-5 border-b pb-2 border-gray-300 dark:border-gray-700'>
               <Image className="w-28 h-24" src={project.image} height={450} width={450} alt='React Post Image' />
               <div className='flex flex-col'>
                   <p className=' w-48 heading_3 text-sm dark:text-slate-300 font-thin my-1 ms-3' >{project.name}</p>
