@@ -25,7 +25,7 @@ const ProjectTemplate = (project: projectTemplateInterFace) => {
                     <p className='heading_3 me-3'><FontAwesomeIcon icon={faArrowUp} className='date_text me-1' /> {project.upvotes} </p>
                     <p className='heading_3 me-3'><FontAwesomeIcon icon={faArrowDown} className='date_text me-1' /> {project.downvotes} </p>
                     <p className='heading_3'><FontAwesomeIcon icon={faComment} className='date_text me-1' /> {project.comments} </p>
-
+   
                 </div>
 
             </div>

@@ -19,7 +19,7 @@ const ProjectTopMenu: React.FC<ProjectContentProps> = ({ handleOpen }) => {
         { _id: 1, field: 'Upvotes' },
         { _id: 2, field: 'DownVotes' },
         { _id: 3, field: 'Most Comments' },
-        { _id: 4, field: 'Least Comnents' }
+        { _id: 4, field: 'Least Comnents' } 
     ]
 
     return (
