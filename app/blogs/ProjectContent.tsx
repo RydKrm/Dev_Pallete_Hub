@@ -14,7 +14,7 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ handleOpen }) => {
   return (
     <div className='container max-w-screen-lg mx-auto mt-8 divide-y'>
       <ProjectTopMenu handleOpen={handleOpen} />
-      <div className="grid grid-cols-1 pt-4 mt-7 md:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-col pt-4 mt-7">
         {projectData.map((project: projectTemplateInterFace) => (
           <ProjectTemplate key={project._id} {...project} />
         ))

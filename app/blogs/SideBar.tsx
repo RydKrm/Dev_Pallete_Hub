@@ -40,7 +40,7 @@ const tags: { _id: number | string, tag: string }[] = [
 
 const projects: projectInterFace[] = projectData;
 
-const colors = ["text-c_primary", "text-c_secondary", "text-c_tertiary", "text-c_neutral"];
+const colors = ["text-c_primary", "text-c_neutral", "text-c_secondary", "text-c_tertiary"];
 
 const SideBar: React.FC<SideBarProps> = ({ handleOpen }) => {
 
@@ -52,9 +52,10 @@ const SideBar: React.FC<SideBarProps> = ({ handleOpen }) => {
           <h2 className='mb-4 heading_2'>Select Tags</h2>
           <div className="grid grid-cols-3">
             {
-              tags.map((tag, index) => <p className={`heading_3 text-sm dark:text-slate-300 font-thin my-1 hover:${colors[index % 4]} ms-3 `} key={tag._id}>{tag.tag}</p>)
-            }
+            tags.map((tag, index) => <p className={`heading_3 text-sm dark:text-slate-300 font-thin my-1 hover:${colors[index % 4]} ms-3 `} key={tag._id}>{tag.tag}</p>)
+          }
           </div>
+          
         </div>
         <div>
           <h2 className='mt-10 mb-4 heading_2'>Recent Projects </h2>
@@ -64,13 +65,13 @@ const SideBar: React.FC<SideBarProps> = ({ handleOpen }) => {
                 <Image className="h-24 w-28" src={project.image} height={450} width={450} alt='React Post Image' />
                 <div className='flex flex-col'>
                   <p className='w-48 my-1 text-sm font-thin heading_3 dark:text-slate-300 ms-3' >{project.name}</p>
-                  <div className="grid grid-cols-3 mb-2 gap-y-2 ms-3">
-                    {project.tags.map((tag: { _id: number; tag: string }, index: number) => (<p className={`mx-1 tag_text ${colors[index % 4]} `} key={tag._id}>{tag.tag}.</p>))}
+                  <div className="grid grid-cols-3 mt-2 mb-2 gap-y-2 ms-3">
+                    {project.tags.map((tag: { _id: number; tag: string }, index: number) => (<p className={` tag_text ${colors[index % 4]} `} key={tag._id}>{tag.tag}.</p>))}
                   </div>
-                  <div className="flex flex-row">
+                  {/* <div className="flex flex-row">
                     <Image src='/project/project_1.jpg' className='w-6 h-6 rounded-full ms-3 ' height={120} width={120} alt='sidebar image' />
                     <h2 className='mt-1 heading_3 ms-2'>John Deo </h2>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             )
