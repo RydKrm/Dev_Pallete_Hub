@@ -82,66 +82,68 @@
   }
 
   .text-hover{
-    @apply text-black hover:text-c_primary bg-white dark:bg-black dark:text-white dark:hover:text-c_primary;
+    @apply text-black bg-white hover:text-c_primary dark:bg-black dark:text-white dark:hover:text-c_primary;
   }
 
   .text-large{
-    @apply text-c_primary bg-white dark:bg-black dark:text-c_primary text-4xl font-semibold     
-    font-sans ;
+    @apply font-sans text-4xl font-semibold bg-white text-c_primary dark:bg-black dark:text-c_primary ;
   }
 
   .text_p{
-    @apply font-medium text-c_text_black text-base tracking-normal leading-3 dark:text-white;
+    @apply text-base font-medium leading-3 tracking-normal text-c_text_black dark:text-white;
   } 
   .text_h1{
     @apply font-black text-6xl leading-10 text-c_secondary dark:text-c_primary 
   }
   .text_h2{
-    @apply font-black text-4xl leading-8 text-c_secondary dark:text-c_primary;
+    @apply text-4xl font-black leading-8 text-c_secondary dark:text-c_primary;
   }
 
   .text_h2_black{
-    @apply font-black text-4xl leading-8 text-c_text_black  dark:text-white;
+    @apply text-4xl font-black leading-8 text-c_text_black dark:text-white;
   }
 
   .text_h3{
-     @apply font-medium text-3xl leading-3 text-c_secondary dark:text-c_primary;
+     @apply text-3xl font-medium leading-3 text-c_secondary dark:text-c_primary;
   }
 
   .text_h3_black{
-    @apply font-medium text-2xl leading-3 text-c_text_black dark:text-white;
+    @apply text-2xl font-medium leading-3 text-c_text_black dark:text-white;
   }
 
   .text_h4{
-    @apply font-normal text-xl leading-3 text-c_text_black dark:text-white;
+    @apply text-xl font-normal leading-3 text-c_text_black dark:text-white;
   }
 
   .text_h5{
-    @apply font-extralight text-base leading-6 text-c_text_black dark:text-white text-slate-600;
+    @apply text-base leading-6 font-extralight text-c_text_black dark:text-white text-slate-600;
   }
 
   .text_h6{
-    @apply font-light text-base leading-3 text-c_text_black dark:text-white;
+    @apply text-base font-light leading-3 text-c_text_black dark:text-white;
   }
 
   .text-c_lg{
-    @apply font-medium text-c_text_black text-lg;
+    @apply text-lg font-medium text-c_text_black;
   }
 
   .text-c_xl{
-    @apply font-medium text-xl text-c_text_black;
+    @apply text-xl font-medium text-c_text_black;
   }
 
   .gradient-st{
-    @apply bg-gradient-to-l from-c_secondary to-c_tertiary transition duration-300 delay-150 hover:delay-300 ;
+    @apply transition duration-300 delay-150 bg-gradient-to-l from-c_secondary to-c_tertiary hover:delay-300 ;
   }
 
   .gradient-st-dark{
-    @apply bg-gradient-to-l from-c_primary to-c_primary_dark transition duration-300 delay-150 hover:delay-300 ;
+    @apply transition duration-300 delay-150 bg-gradient-to-l from-c_primary to-c_primary_dark hover:delay-300 ;
   }
 
   .container{
-    @apply lg:max-w-screen-xl  mx-auto ;
+    @apply mx-auto lg:max-w-screen-xl ;
+  }
+  .container_2{
+    @apply mx-auto lg:max-w-[1124px] ;
   }
 
   .border_c{
@@ -155,10 +157,10 @@
     @apply flex flex-col;
   }
   .text-c_input{
-    @apply border border-c_tertiary dark:border-c_primary h-10 rounded-sm ps-3 my-2 dark:bg-c_text_black;
+    @apply h-10 my-2 border rounded-sm border-c_tertiary dark:border-c_primary ps-3 dark:bg-c_text_black;
   }
   .text-c_label{
-    @apply text_h3 text-base font-normal;
+    @apply text-base font-normal text_h3;
   }
  
   .heading_1{
@@ -187,6 +189,10 @@
 
   .paragraph_text{
     @apply text-[#687385] font-[400] text-[12px] leading-[18px] font-noto dark:text-[#cccccc];
+  }
+
+  .Border{
+    @apply border-[1px] border-gray-200 dark:border-gray-700;
   }
 
 

@@ -49,7 +49,6 @@ const SideBar: React.FC<SideBarProps> = ({ handleOpen }) => {
     <>
       <div className='f_col lg:ms-10 lg:mt-14'>
         <p className='w-8 h-8 pt-1 pl-2 mb-5 text-white rounded-md lg:hidden bg-c_tertiary dark:bg-c_primary' onClick={handleOpen}><FontAwesomeIcon icon={faBars} /> </p>
-         <TagList />
         {/* <div>
           <h2 className='mb-4 heading_2'>Select Tags</h2>
           <div className="grid grid-cols-3">
@@ -58,6 +57,7 @@ const SideBar: React.FC<SideBarProps> = ({ handleOpen }) => {
           }
           </div>
         </div> */}
+        <TagList/>
         <div>
           <h2 className='mt-10 mb-4 heading_2'>Recent Projects </h2>
           {

@@ -1,8 +1,8 @@
-'use client'
 import React from 'react'
-import Image from 'next/image';
 import Link from 'next/link';
 import { ModeToggle } from '@/app/darkMode';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPeopleArrows, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     return (
@@ -17,6 +17,8 @@ const Navbar = () => {
                         <li><Link href='/blogs'> Blogs </Link></li>
                         <li><Link href='/questions'>Questions</Link></li>
                         <li><Link href='/add_project'> Add Project </Link></li>
+                        <li><Link href='/login'>Login</Link></li>
+                        <li><Link href='/register'>Register</Link></li>
                     </ul>
                 </div>
                 <Link href='/' className="text-xl normal-case btn btn-ghost">Empower Rise</Link>
@@ -28,6 +30,8 @@ const Navbar = () => {
                     <li><Link href='/blogs'> Blogs </Link></li>
                     <li><Link href='/questions'>Questions</Link></li>
                     <li><Link href='/add_project'> Add Project </Link></li>
+                    <li><Link href='/login'>Login</Link></li>
+                    <li><Link href='/register'>Register</Link></li>
                 </ul>
             </div>
             <div className="mr-4 navbar-end lg:mr-20">
@@ -37,11 +41,7 @@ const Navbar = () => {
                     borderRadius: "50%", // This will create a circular shape
                     overflow: "hidden" // To clip the image within the circular container
                 }}>
-                    <Image
-                        src={''}
-                        alt="User"
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                    />
+                    <FontAwesomeIcon icon={faUser} />
                 </div>
                 <ModeToggle />
             </div>

@@ -5,29 +5,11 @@ import React from 'react'
 import { projectData } from '../../lib/data/projectsData';
 import { projectInterFace } from '@/lib/interface/projectsInterface';
 import Image from 'next/image';
+import TagList from '@/components/shared/TagList';
 
 interface SideBarProps {
   handleOpen: () => void
 }
-
-const tags: { _id: number | string, tag: string }[] = [
-  { _id: 1, tag: 'HTML' },
-  { _id: 2, tag: 'CSS3' },
-  { _id: 3, tag: 'JavaScript' },
-  { _id: 4, tag: 'React.js' },
-  { _id: 5, tag: 'Next.js' },
-  { _id: 6, tag: 'TypeScript' },
-  { _id: 7, tag: 'PHP' },
-  { _id: 8, tag: 'LaraVel' },
-  { _id: 9, tag: 'TailWind CSS' },
-  { _id: 10, tag: 'Vue.js' },
-  { _id: 11, tag: 'MySQL' },
-  { _id: 12, tag: 'MongoDB' },
-  { _id: 13, tag: 'Node.js' },
-  { _id: 14, tag: 'Express.js' },
-  { _id: 15, tag: 'Deno.js' }
-
-]
 
 // const projects: { _id: number | string, project: string, image:string}[] = [
 //   { _id: 1, project: 'Empower Crowed Funding By Prople', image: '/project/project_1.jpg', },
@@ -48,14 +30,15 @@ const SideBar: React.FC<SideBarProps> = ({ handleOpen }) => {
     <>
       <div className='f_col lg:ms-10 lg:mt-14'>
         <p className='w-8 h-8 pt-1 pl-2 mb-5 text-white rounded-md lg:hidden bg-c_tertiary dark:bg-c_primary' onClick={handleOpen}><FontAwesomeIcon icon={faBars} /> </p>
-        <div>
+         <TagList />
+        {/* <div>
           <h2 className='mb-4 heading_2'>Select Tags</h2>
           <div className="grid grid-cols-3">
             {
               tags.map((tag, index) => <p className={`heading_3 text-sm dark:text-slate-300 font-thin my-1 hover:${colors[index % 4]} ms-3 `} key={tag._id}>{tag.tag}</p>)
             }
           </div>
-        </div>
+        </div> */}
         <div>
           <h2 className='mt-10 mb-4 heading_2'>Recent Projects </h2>
           {
