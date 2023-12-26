@@ -4,6 +4,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/shared/theme-provider'
 import Navbar from '@/components/shared/Navbar'
 import Footer from '@/components/shared/Footer'
+import { AuthContextProvider } from '@/context/authContext'
 
 const noto_sans_sp = Noto_Sans_JP({
   style: ['normal'],
@@ -30,9 +31,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="max-w-full md:max-w-full lg:max-w-full dark:bg-c_bg_dark ">
-            <Navbar />
-            {children}
-            <Footer />
+            <AuthContextProvider> 
+              <Navbar />
+              {children}
+              <Footer />
+            </AuthContextProvider>
+           
           </div>
 
         </ThemeProvider>

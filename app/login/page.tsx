@@ -6,12 +6,14 @@ import InputCheck from '@/components/ui/input-check';
 import InputText from '@/components/ui/input-text';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 const Login = () => {
   return (
-    <div className='h-[80vh] w-full flex justify-center items-center '>
+    <div className='flex items-center justify-center w-full '>
       <div className="flex flex-col rounded-md container_2 bg-c_bg_light dark:bg-c_bg_dark ">
-        
+        <div className="px-16 pb-16 mx-10 my-5 shadow-2xl "> 
         <Formik
           initialValues={{
             email: '',
@@ -32,7 +34,7 @@ const Login = () => {
             }, 400);
           }}
         >
-          <Form className='px-16 pb-16 mx-10 my-5 shadow-2xl'>
+          <Form className=''>
             <h2 className="mt-8 mb-5 text-center heading_1">Login</h2>
             <InputText label="" name="email" type="email" placeholder="Email" />
             <InputText label="" name="password" type="password" placeholder="Password" />
@@ -40,12 +42,18 @@ const Login = () => {
               <InputCheck name="acceptedTerms" >Remember Me</InputCheck>
               <Link href='/forgetPassword' className='heading_4' >Forget Password</Link>
             </div>
-            <Button variant={'submit'} type="submit">Submit</Button>
-            <div className="Border"> </div>
+            <Button variant={'submit'} type="submit" className='ms-3'>Submit</Button>
+            <div className="mt-3 Border"> </div>
           </Form>
-         
         </Formik>
-        <div className="Border"> </div>
+        <h2 className='mt-2 text-center heading_3'> Login With</h2>
+        <div className="flex flex-row justify-between mt-3 mx-7">
+          <Button variant={'submit'} > <FontAwesomeIcon icon={faGoogle} className='mb-1 text-lg me-1' /> Google </Button>
+            <Button variant={'submit'} > <FontAwesomeIcon icon={faGithub} className='mb-1 text-lg me-1' /> Github </Button>
+        </div>
+          <h2 className="mt-5 text-center heading_4">Do not have a account. <Link href='/register' className='text-red-400'>Register</Link></h2>
+        </div>
+        
       </div>
    </div>
   )

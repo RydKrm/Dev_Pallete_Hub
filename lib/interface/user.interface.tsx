@@ -9,3 +9,22 @@
     totalTutorial:number,
     totalAnswer:number
  }
+
+ export interface registerInterface {
+   name:string,
+   email:string,
+   password:string
+ }
+
+export interface GoogleLogInterface {
+  uid: string;
+  displayName: string;
+  email: string;
+  photoURL: string;
+}
+
+export interface AuthContextProps {
+  user: GoogleLogInterface | null;
+  signInWithGoogle: () => Promise<void>;
+  signOut: () => Promise<void>;
+}
