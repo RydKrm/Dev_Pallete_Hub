@@ -8,8 +8,19 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { UserAuth } from '@/context/authContext';
 
 const Login = () => {
+  const { googleSignIn, user } = UserAuth();
+  // const router = useRouter();
+  const handleGoogle = async () => {
+    try {
+      await googleSignIn();
+      // router.push('/');
+    } catch (error) {
+      console.log(error);
+    }
+  } 
   return (
     <div className='flex items-center justify-center w-full '>
       <div className="flex flex-col rounded-md container_2 bg-c_bg_light dark:bg-c_bg_dark ">
