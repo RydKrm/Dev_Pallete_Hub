@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={noto_sans_sp.className}>
+        <AuthContextProvider> 
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -31,15 +32,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="max-w-full md:max-w-full lg:max-w-full dark:bg-c_bg_dark ">
-            <AuthContextProvider> 
-              <Navbar />
-              {children}
-              <Footer />
-            </AuthContextProvider>
-           
+            <Navbar />
+            {children}
+            <Footer />
           </div>
-
         </ThemeProvider>
+      </AuthContextProvider>
       </body>
     </html>
   )

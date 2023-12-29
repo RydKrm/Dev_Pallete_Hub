@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import InputCheck from '@/components/ui/input-check';
@@ -9,18 +9,41 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { UserAuth } from '@/context/authContext';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
-  const { googleSignIn, user } = UserAuth();
-  // const router = useRouter();
+  const { googleSignIn,githubSignIn,signInUser } = UserAuth();
+  const [logInfo,setLogInfo] = useState<boolean>(false);
+   const router = useRouter();
   const handleGoogle = async () => {
     try {
       await googleSignIn();
-      // router.push('/');
+       router.push('/');
     } catch (error) {
       console.log(error);
     }
   } 
+  const handleGithub = async () => {
+    try {
+      await githubSignIn();
+       router.push('/');
+    } catch (error) {
+      console.log(error);
+    }
+  } 
+
+  const handleLogin = async(email:string,password:string) => {
+    try {
+     const login =  await signInUser(email,password);
+     if(login) {
+      router.push('/');
+     } else {
+        setLogInfo(true);
+     }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <div className='flex items-center justify-center w-full '>
       <div className="flex flex-col rounded-md container_2 bg-c_bg_light dark:bg-c_bg_dark ">
@@ -39,6 +62,7 @@ const Login = () => {
               .required('Required'),
           })}
           onSubmit={(values, { setSubmitting }) => {
+            handleLogin(values.email,values.password);
             setTimeout(() => {
               alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
@@ -59,10 +83,11 @@ const Login = () => {
         </Formik>
         <h2 className='mt-2 text-center heading_3'> Login With</h2>
         <div className="flex flex-row justify-between mt-3 mx-7">
-          <Button variant={'submit'} > <FontAwesomeIcon icon={faGoogle} className='mb-1 text-lg me-1' /> Google </Button>
-            <Button variant={'submit'} > <FontAwesomeIcon icon={faGithub} className='mb-1 text-lg me-1' /> Github </Button>
+            <Button variant={'submit'} onClick={handleGoogle} > <FontAwesomeIcon icon={faGoogle} className='mb-1 text-lg me-1' /> Google </Button>
+            <Button variant={'submit'} onClick={handleGithub} > <FontAwesomeIcon icon={faGithub} className='mb-1 text-lg me-1' /> Github </Button>
         </div>
           <h2 className="mt-5 text-center heading_4">Do not have a account. <Link href='/register' className='text-red-400'>Register</Link></h2>
+          {logInfo && <h2 className='my-4 text-center heading_4'>Invalid email or password </h2>}
         </div>
         
       </div>

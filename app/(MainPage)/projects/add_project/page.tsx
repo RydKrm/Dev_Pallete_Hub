@@ -2,10 +2,10 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import InputText from '@/components/ui/input-text';
 import { Button } from '@/components/ui/button';
 import InputFile from '@/components/ui/input-file';
 import { Textarea } from '@/components/ui/textarea';
+import InputText from '@/components/ui/input-text';
 
 const SignupForm = () => {
   return (
@@ -44,17 +44,16 @@ const SignupForm = () => {
       }}
     >
       <Form className='container h-screen'> 
-       <div className="f_row w-full bg-white dark:bg-c_text_black items-center grid 
-       grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-20 pt-10 pb-10 rounded-md">
-        <InputText name='name' label='Name'/>
+       <div className="grid items-center w-full grid-cols-1 gap-4 px-20 pt-10 pb-10 bg-white rounded-md f_row dark:bg-c_text_black md:grid-cols-2 lg:grid-cols-3">
+        {/* <InputText name='name' label='Name'/>
         <InputText name='title' label='Project Title' />
         <InputText name='liveLink' label='Project Live Link' />
         <InputText name='clientLink' label='Project Client Site Link' />
-        <InputText name='serverLink' label='Project Server Site Link' />
+        <InputText name='serverLink' label='Project Server Site Link' /> */}
         <InputFile name="image" label='Project Cover Photo' />
         <Textarea  name='description' className='col-span-3' />
 
-         <Button className='col-start-2 w-48 ms-14 mt-5 heading_2' variant='submit' size='lg' type="submit">Submit</Button>
+         <Button className='w-48 col-start-2 mt-5 ms-14 heading_2' variant='submit' size='lg' type="submit">Submit</Button>
        </div>
         
 

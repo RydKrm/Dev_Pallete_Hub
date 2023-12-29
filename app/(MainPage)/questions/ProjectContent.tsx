@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectTopMenu from './TopMenu';
 import ProjectTemplate from './ProjectTemplate';
-import { projectData } from '../../lib/data/projectsData';
+import { projectData } from '../../../lib/data/projectsData';
 import { projectTemplateInterFace } from '@/lib/interface/projectsInterface';
 
 export interface ProjectContentProps {

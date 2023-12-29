@@ -2,7 +2,7 @@ import BlogSingleTemplate from '@/components/templates/BlogSingleTemplate';
 import { projectData } from '@/lib/data/projectsData';
 import { projectTemplateInterFace } from '@/lib/interface/projectsInterface';
 import React from 'react'
-import LeftSideBar from '../questions/LeftSIdeBar/LeftSideBar';
+import LeftSideBar from '../../(MainPage)/questions/LeftSIdeBar/LeftSideBar';
 
 const FeaturesBlog = () => {
     let project: projectTemplateInterFace[] = projectData.slice(0, 6)

@@ -1,3 +1,5 @@
+import { Schema } from "mongoose";
+
  export interface userInterface {
     _id:number,
     name: string,
@@ -11,9 +13,10 @@
  }
 
  export interface registerInterface {
-   name:string,
-   email:string,
-   password:string
+   name:string|null,
+   email:string|null,
+   password:string|null,
+   photoURL:string|null
  }
 
 export interface GoogleLogInterface {
@@ -27,4 +30,13 @@ export interface AuthContextProps {
   user: GoogleLogInterface | null;
   signInWithGoogle: () => Promise<void>;
   signOut: () => Promise<void>;
+}
+
+export interface TagInterface {
+  _id:Schema.Types.ObjectId,
+  tag:string,
+  projectList:[Schema.Types.ObjectId],
+  blogList:[Schema.Types.ObjectId],
+  tutorialList:[Schema.Types.ObjectId],
+  questionList:[Schema.Types.ObjectId]
 }

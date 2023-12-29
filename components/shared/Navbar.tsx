@@ -1,10 +1,14 @@
-import React from 'react'
+'use client'
+import React, { useContext } from 'react'
 import Link from 'next/link';
 import { ModeToggle } from '@/app/darkMode';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPeopleArrows, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { AuthContext, UserAuth } from '@/context/authContext';
 
 const Navbar = () => {
+   // const {user} = UserAuth();
+   const {user} = useContext(AuthContext)
     return (
         <nav className="container bg-transparent navbar ">
             <div className="flex justify-center w-full navbar-start lg:max-w-6xl">
@@ -17,8 +21,10 @@ const Navbar = () => {
                         <li><Link href='/blogs'> Blogs </Link></li>
                         <li><Link href='/questions'>Questions</Link></li>
                         <li><Link href='/add_project'> Add Project </Link></li>
+                        {!user && 
                         <li><Link href='/login'>Login</Link></li>
-                        <li><Link href='/register'>Register</Link></li>
+                        // <li><Link href='/register'>Register</Link></li>
+                        }
                     </ul>
                 </div>
                 <Link href='/' className="text-xl normal-case btn btn-ghost">Empower Rise</Link>
@@ -30,19 +36,23 @@ const Navbar = () => {
                     <li><Link href='/blogs'> Blogs </Link></li>
                     <li><Link href='/questions'>Questions</Link></li>
                     <li><Link href='/add_project'> Add Project </Link></li>
-                    <li><Link href='/login'>Login</Link></li>
-                    <li><Link href='/register'>Register</Link></li>
+                  {!user &&   <li><Link href='/login'>Login</Link></li>}
+                    {/* <li><Link href='/register'>Register</Link></li> */}
                 </ul>
             </div>
             <div className="mr-4 navbar-end lg:mr-20">
+              {user &&
+              <Link href='/dashboard/profilePage'>
                 <div style={{
                     width: "25px",
                     height: "25px",
-                    borderRadius: "50%", // This will create a circular shape
-                    overflow: "hidden" // To clip the image within the circular container
+                    borderRadius: "50%",
+                    overflow: "hidden" 
                 }}>
                     <FontAwesomeIcon icon={faUser} />
                 </div>
+              </Link>
+                }
                 <ModeToggle />
             </div>
         </nav>

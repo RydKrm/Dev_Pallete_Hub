@@ -1,8 +1,8 @@
-import Banner from './home/Banner'
-import FeaturesProjects from './home/featuresProjects'
-import FeaturesBlog from './home/FeaturesBlogs'
-import OurGoal from './home/OurGoal'
-import ProfileAndTags from './home/ProfileAndTags/ProfileAndTags'
+import Banner from './(OtherPage)/home/Banner'
+import FeaturesProjects from './(OtherPage)/home/featuresProjects'
+import FeaturesBlog from './(OtherPage)/home/FeaturesBlogs'
+import OurGoal from './(OtherPage)/home/OurGoal'
+import ProfileAndTags from './(OtherPage)/home/ProfileAndTags/ProfileAndTags'
 
 export default function Home() {
 
