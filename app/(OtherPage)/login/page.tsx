@@ -89,7 +89,6 @@ const Login = () => {
           <h2 className="mt-5 text-center heading_4">Do not have a account. <Link href='/register' className='text-red-400'>Register</Link></h2>
           {logInfo && <h2 className='my-4 text-center heading_4'>Invalid email or password </h2>}
         </div>
-        
       </div>
    </div>
   )

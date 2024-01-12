@@ -1,4 +1,4 @@
-import { projectTemplateInterFace } from '@/lib/interface/projectsInterface'
+import { projectTemplateInterFace } from '@/interface/projectsInterface'
 import { faArrowDown, faArrowUp, faComment } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';

@@ -1,5 +1,5 @@
 'use client'
-import { projectTemplateInterFace } from "@/lib/interface/projectsInterface";
+import { projectTemplateInterFace } from "@/interface/projectsInterface";
 import { faArrowUp, faArrowDown,faComment } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -9,6 +9,11 @@ import LeftSideBar from "../LeftSIdeBar/LeftSideBar";
 
 const SingleDonation = () => {
     const { id } = useParams();
+
+    // TODO fetch Single question data 
+    // TODO Create also a up voting and down voting system 
+    // TODO Redesign the pages 
+    // TODO Create answer page which also has a up voting and down voting system 
     //states
     const [details, setDetails] = useState<projectTemplateInterFace>({
         _id: 1,

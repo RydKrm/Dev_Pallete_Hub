@@ -1,6 +1,6 @@
 import { Schema, model, models } from "mongoose";
 
-const RegisterSchema = new Schema({
+const UserSchema = new Schema({
    name:{type:String,require:true},
    email:{type:String, require:true},
    password:{type:String},
@@ -20,6 +20,6 @@ const RegisterSchema = new Schema({
    saves: [{ type: Schema.Types.ObjectId }]
 })
 
-const Register = models.User || model('User',RegisterSchema);
+const User = models.User || model('User',UserSchema);
 
-export default Register;
+export default User;

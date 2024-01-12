@@ -1,4 +1,4 @@
-import { userInterface } from '@/lib/interface/user.interface';
+import { userInterface } from '@/interface/user.interface';
 import { faBlog, faChalkboardUser, faClipboardQuestion, faCommentDots, z } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';

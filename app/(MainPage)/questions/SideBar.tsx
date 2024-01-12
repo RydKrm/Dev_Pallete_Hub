@@ -3,7 +3,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { projectData } from '../../../lib/data/projectsData';
-import { projectInterFace } from '@/lib/interface/projectsInterface';
+import { projectInterFace } from '@/interface/projectsInterface';
 import Image from 'next/image';
 import TagList from '@/components/shared/TagList';
 

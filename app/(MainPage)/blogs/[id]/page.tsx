@@ -1,6 +1,6 @@
 'use client'
 import SectionTitle from "@/components/shared/SectionTitle";
-import { projectTemplateInterFace } from "@/lib/interface/projectsInterface";
+import { projectTemplateInterFace } from "@/interface/projectsInterface";
 import { faArrowUp, faArrowDown,faComment } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";

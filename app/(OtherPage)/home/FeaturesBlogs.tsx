@@ -1,6 +1,6 @@
 import BlogSingleTemplate from '@/components/templates/BlogSingleTemplate';
 import { projectData } from '@/lib/data/projectsData';
-import { projectTemplateInterFace } from '@/lib/interface/projectsInterface';
+import { projectTemplateInterFace } from '@/interface/projectsInterface';
 import React from 'react'
 import LeftSideBar from '../../(MainPage)/questions/LeftSIdeBar/LeftSideBar';
 

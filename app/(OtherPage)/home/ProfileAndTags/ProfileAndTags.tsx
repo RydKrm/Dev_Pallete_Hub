@@ -2,7 +2,7 @@ import TagList from '@/components/shared/TagList'
 import React from 'react'
 import MyProfile from './MyProfile'
 import { userData } from '@/lib/data/userData'
-import { userInterface } from '@/lib/interface/user.interface'
+import { userInterface } from '@/interface/user.interface'
 import UserHomeProfile from '@/components/templates/UserHomeProfile'
 
 const ProfileAndTags = () => {

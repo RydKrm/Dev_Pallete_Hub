@@ -1,6 +1,6 @@
 'use client'
 import { getTagList } from '@/actions/tag.action';
-import { TagInterface } from '@/lib/interface/user.interface';
+import { TagInterface } from '@/interface/user.interface';
 import React, { useEffect, useState } from 'react';
 
 const TagList = () => {

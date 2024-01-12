@@ -2,25 +2,22 @@ import DropDown from "@/components/ui/dropdown";
 import { ProjectContentProps } from "./ProjectContent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import useUserInfo from "@/customHook/useUserInfo";
 
+const ProjectTopMenu = ({ handleOpen }: { handleOpen: () => void } ) => {
 
-
-const ProjectTopMenu: React.FC<ProjectContentProps> = ({ handleOpen }) => {
-
-    const type: string = 'fund'
-
+    const {userId} = useUserInfo();
 
     const setSort = (event: React.ChangeEvent<HTMLInputElement>) => {
         // dispatch({type:'SORT_BY',payload:e.target.value})
     }
 
     const sortBy = [
-        { _id: 1, field: 'Upvotes' },
-        { _id: 2, field: 'DownVotes' },
-        { _id: 3, field: 'Most Comments' },
-        { _id: 4, field: 'Least Comnents' } 
+        { _id: 1, tag: 'Upvotes' },
+        { _id: 2, tag: 'DownVotes' },
+        { _id: 3, tag: 'Most Comments' },
+        { _id: 4, tag: 'Least Comnents' } 
     ]
 
     return (
@@ -32,7 +29,9 @@ const ProjectTopMenu: React.FC<ProjectContentProps> = ({ handleOpen }) => {
             </div>
 
             <div className="flex flex-row mx-1 ms-5 md:ms-0 me-4">
+              {userId && 
                 <Link href='/questions/addQuestion' className='w-32 lg:me-1 LinkBtn bg-c_primary'>Add Question </Link>
+               }
             </div>
         </div>
     );

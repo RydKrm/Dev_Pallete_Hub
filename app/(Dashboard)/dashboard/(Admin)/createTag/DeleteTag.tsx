@@ -1,6 +1,6 @@
 'use client'
 import { deleteTag, getTagList } from '@/actions/tag.action'
-import { TagInterface } from '@/lib/interface/user.interface';
+import { TagInterface } from '@/interface/user.interface';
 import { faCancel, faClose, faCross } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Schema } from 'mongoose';

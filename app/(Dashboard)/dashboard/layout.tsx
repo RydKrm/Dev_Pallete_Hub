@@ -12,7 +12,7 @@ export default function RootLayout({children}:{children: React.ReactNode}){
           </div>
           <div className="mt-3 ml-2 rounded-sm shadow-md drawer-side bg-c_bg_light dark:bg-c_bg_dark Border">
               <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-              <div className="h-full menu w-80 text-base-content ">
+              <div className="w-64 h-full menu text-base-content ">
                 <DashBoardNavbar />
               </div>
           </div>

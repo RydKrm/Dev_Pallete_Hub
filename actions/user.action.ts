@@ -1,8 +1,8 @@
 'use server'
-
-import Register from "@/database/register.model";
+import User from "@/database/user.model";
+import Register from "@/database/user.model";
 import  connectToDatabase  from "@/db";
-import { registerInterface } from "@/lib/interface/user.interface";
+import { registerInterface, userProfileInterface } from "@/interface/user.interface";
 
 export const createUser = async(params:registerInterface)=>{
 
@@ -29,3 +29,17 @@ export const createUser = async(params:registerInterface)=>{
   }
   
 }
+
+export const getProfileUser = async (email: string) => {
+  try {
+     connectToDatabase();
+    const user:userProfileInterface | null = await User.findOne({ email }).select({ _id: 1, name: 1, role: 1 }).lean();
+    if (!user) {
+      return { _id: '', name: '', role: '' };
+    }
+    return user;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};

@@ -2,18 +2,20 @@
 
 import Tag from "@/database/tag.model";
 import connectToDatabase from "@/db"
-import { TagInterface } from "@/lib/interface/user.interface";
+import { TagInterface } from "@/interface/user.interface";
 import { revalidatePath } from "next/cache";
 
-export const getTagList = async()=>{
- try {
-   connectToDatabase();
-   const tagList:TagInterface = await Tag.find().lean();
-   return tagList;
- } catch (error) {
+export const getTagList = async () => {
+  try {
+    connectToDatabase();
+    const tagList: TagInterface[] = await Tag.find().select({_id: 1, tag: 1}).lean();
+    return tagList;
+  } catch (error) {
     console.log(error);
- }
+    return [];
+  }
 }
+
 
 export const createTag = async(tag:string) =>{
    try {

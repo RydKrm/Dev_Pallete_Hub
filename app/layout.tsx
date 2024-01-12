@@ -31,7 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-w-full md:max-w-full lg:max-w-full dark:bg-c_bg_dark ">
+          <div className=" dark:bg-c_bg_dark">
             <Navbar />
             {children}
             <Footer />

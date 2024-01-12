@@ -35,8 +35,14 @@ export interface AuthContextProps {
 export interface TagInterface {
   _id:Schema.Types.ObjectId,
   tag:string,
-  projectList:[Schema.Types.ObjectId],
-  blogList:[Schema.Types.ObjectId],
-  tutorialList:[Schema.Types.ObjectId],
-  questionList:[Schema.Types.ObjectId]
+  // projectList:[Schema.Types.ObjectId],
+  // blogList:[Schema.Types.ObjectId],
+  // tutorialList:[Schema.Types.ObjectId],
+  // questionList:[Schema.Types.ObjectId]
+}
+
+export interface userProfileInterface{
+  _id:Schema.Types.ObjectId,
+  name:string,
+  role:string
 }

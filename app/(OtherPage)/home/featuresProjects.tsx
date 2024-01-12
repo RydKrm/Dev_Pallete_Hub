@@ -1,6 +1,6 @@
 import ProjectSingleTemplate from '@/components/templates/ProjectSingleTemplates';
 import { projectData } from '@/lib/data/projectsData';
-import { projectTemplateInterFace } from '@/lib/interface/projectsInterface';
+import { projectTemplateInterFace } from '@/interface/projectsInterface';
 import React from 'react'
 
 const FeaturesProjects = () => {
