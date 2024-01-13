@@ -4,14 +4,13 @@ import React from 'react';
 interface DropDownInterface {
   list: {_id:number,field:string}[];
   handler: (event: any) => void;
-  classList:string
 }
 
-const DropDown: React.FC<DropDownInterface> = ({ list, handler,classList }) => {
+const DropDown: React.FC<DropDownInterface> = ({ list, handler }) => {
   return (
     <div>
       <select
-        className={`font-light bg-white border rounded-sm border-c_primary font-poppins ms-5 md:ms-0 h-9 w-36 dark:bg-c_bg_dark ${classList} `}
+        className={`font-light bg-white border rounded-sm border-c_primary font-poppins ms-5 md:ms-0 h-9 w-36 dark:bg-c_bg_dark  `}
         onChange={handler} >
         <option value="">
           Select
