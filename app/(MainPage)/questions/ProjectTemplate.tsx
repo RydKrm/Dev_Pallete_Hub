@@ -2,7 +2,6 @@ import { getQuestionInterface } from '@/interface/question.interface';
 import { TagInterface } from '@/interface/user.interface';
 import { faArrowDown, faArrowUp, faComment } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react'
 
