@@ -10,7 +10,6 @@ import { TagInterface } from '@/interface/user.interface';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Form, Formik } from 'formik';
-import { useRouter } from 'next/navigation';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import * as Yup from 'yup';
@@ -20,7 +19,6 @@ const AddQuestion = () => {
   const [getTag,setGetTag] = useState<TagInterface[]>([]);
   const [description,setDescription] = useState<string>('');
   const [maxTag,setMaxTag] = useState<boolean>(false);
-  const router = useRouter();
   const { userId } = useUserInfo();
 
   console.log('user id testing in questions ', userId);
@@ -108,7 +106,7 @@ const AddQuestion = () => {
                 </span>))}
               </div>
               {maxTag && <h2 className='my-4 text-red-500 heading_4'>Max 5 Tag can be added</h2>}
-              <DropDown handler={handleTag} list={tagList} classList="w-52 ps-3 rounded-full mb-5"/>
+              {/* <DropDown handler={handleTag} list={tagList} classList="w-52 ps-3 rounded-full mb-5"/> */}
               
               <TextEditor handleEditor={handleTextEditor} />
               <Button variant={'submit'} type="submit" className='w-40 mx-auto mt-5'>Submit</Button>
