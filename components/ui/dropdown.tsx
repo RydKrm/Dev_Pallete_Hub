@@ -2,7 +2,7 @@ import { TagInterface } from '@/interface/user.interface';
 import React from 'react';
 
 interface DropDownInterface {
-  list: TagInterface[];
+  list: {_id:number,field:string}[];
   handler: (event: any) => void;
   classList:string
 }
@@ -17,8 +17,8 @@ const DropDown: React.FC<DropDownInterface> = ({ list, handler,classList }) => {
           Select
         </option>
         {list.map((item) => ( 
-          <option key={item.tag} value={`${item.tag}-${item._id}`} className='uppercase dark:bg-c_bg_dark'>
-            {item.tag}
+          <option key={item.field} value={`${item.field}-${item._id}`} className='uppercase dark:bg-c_bg_dark'>
+            {item.field}
           </option>
         ))}
       </select>

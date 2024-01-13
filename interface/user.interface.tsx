@@ -1,7 +1,7 @@
 import { Schema } from "mongoose";
 
  export interface userInterface {
-    _id:number,
+    _id:number | Schema.Types.ObjectId,
     name: string,
     title:string,
     image:string,
@@ -33,7 +33,7 @@ export interface AuthContextProps {
 }
 
 export interface TagInterface {
-  _id:Schema.Types.ObjectId,
+  _id:Schema.Types.ObjectId | number,
   tag:string,
   // projectList:[Schema.Types.ObjectId],
   // blogList:[Schema.Types.ObjectId],

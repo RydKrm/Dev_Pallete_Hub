@@ -14,7 +14,7 @@ export interface ProjectContentProps {
 const ProjectContent: React.FC<ProjectContentProps> = ({ handleOpen}) => {
 
   const [questionList,setQuestionList] = useState<getQuestionInterface[]>([]);
-  console.log('question list from contents =>  ',questionList);
+  // console.log('question list from contents =>  ',questionList);
 
   useEffect(()=>{
    const fetchQuestionList = async () =>{
