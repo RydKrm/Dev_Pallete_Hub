@@ -17,11 +17,10 @@ const ProfileAndTags = () => {
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           {
             userData.map((user:userInterface,index:number)=>(
-              <UserHomeProfile key={user._id} user={user} />
+              <UserHomeProfile key={user.name} user={user} />
             ))
           }
         </div>
-          
          </div>
       </div>
 
@@ -29,4 +28,4 @@ const ProfileAndTags = () => {
   )
 }
 
-export default ProfileAndTags
+export default ProfileAndTags;
