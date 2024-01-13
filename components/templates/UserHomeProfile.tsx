@@ -1,9 +1,8 @@
 import { userInterface } from '@/interface/user.interface';
-import { faBlog, faChalkboardUser, faClipboardQuestion, faCommentDots, z } from '@fortawesome/free-solid-svg-icons';
+import { faBlog, faChalkboardUser, faClipboardQuestion, faCommentDots} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import React from 'react';
-
 interface UserHomeProfileProps {
     user: userInterface;
 }
