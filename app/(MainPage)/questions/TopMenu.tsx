@@ -14,10 +14,10 @@ const ProjectTopMenu = ({ handleOpen }: { handleOpen: () => void } ) => {
     }
 
     const sortBy = [
-        { _id: 1, tag: 'Upvotes' },
-        { _id: 2, tag: 'DownVotes' },
-        { _id: 3, tag: 'Most Comments' },
-        { _id: 4, tag: 'Least Comnents' } 
+        { _id: 1, field: 'Upvotes' },
+        { _id: 2, field: 'DownVotes' },
+        { _id: 3, field: 'Most Comments' },
+        { _id: 4, field: 'Least Comnents' } 
     ]
 
     return (
